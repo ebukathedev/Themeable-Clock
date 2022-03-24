@@ -1,0 +1,172 @@
+@font-face {
+	font-family: AlarmClock sans-serif;
+	src: url(/font/alarm\ clock.ttf);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--background);
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1rem;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 60px 20px;
+}
+
+main {
+	position: relative;
+	max-width: 400px;
+	padding: 15px 20px;
+	margin: auto;
+	background-color: var(--primary);
+	height: auto;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 0px 2px 8px #201f1f8c; /*primary-shadow*/
+}
+
+section {
+	font-size: small;
+	font-weight: 700;
+	color: var(--primary); /*primary*/
+	padding: 4px 15px;
+	background-color: var(--secondary); /*secondary*/
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 50px;
+}
+
+#theme-toggle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--button); /*button and mainText*/
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	padding: 7px;
+}
+
+div img {
+	width: 100%;
+}
+
+h1 {
+	text-shadow: 0 2px 1px var(--shadow1), -1px 3px 1px var(--shadow2),
+		-2px 5px 1px var(--shadow3); /*shadows*/
+	color: var(--mainText); /*main text*/
+	font-family: AlarmClock sans-serif;
+	margin: 20px 0;
+	font-size: 4rem;
+	display: inline-block;
+	border-radius: 10px;
+	padding: 10px 15px;
+	box-shadow: #00000066 0px 2px 4px inset, #0000004d 0px 7px 13px -3px,
+		#bdbbbb33 0px -3px 0px inset;
+}
+
+p {
+	color: var(--secondary); /*secondary*/
+	text-align: left;
+}
+
+.theme-section {
+	visibility: hidden;
+	position: absolute;
+	top: -30%;
+	width: 100%;
+	right: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	box-shadow: 0px 2px 8px #201f1f8c;
+}
+
+.theme-btn {
+	width: 100%;
+	padding: 7px 2px;
+	border: none;
+	font-weight: 500;
+	font-size: 11px;
+}
+
+.theme-btn:hover {
+	cursor: pointer;
+	opacity: 0.8;
+	-moz-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+	transition: ease-in 0.32;
+	border-radius: 3px;
+	box-shadow: 0px 2px 8px #201f1f8c; /*primary-shadow*/
+}
+
+#default {
+	color: #121212;
+	background-color: #ffffffde;
+	border-radius: 3px 0 0 3px;
+}
+#dark {
+	color: #ffffffde;
+	background-color: #121212;
+}
+#morning {
+	color: #e4cfb4;
+	background-color: #362c23;
+}
+#afternoon {
+	color: #fff8b6;
+	background-color: #20655f;
+}
+#night {
+	color: #f1d00a;
+	background-color: #21325e;
+	border-radius: 0 3px 3px 0;
+}
+.hide {
+	visibility: visible;
+	animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@media screen and (max-width: 399px) {
+	h1 {
+		font-size: 3rem;
+	}
+	section {
+		font-size: x-small;
+	}
+	.theme-btn {
+		padding: 5px 2px;
+		font-size: 10px;
+	}
+}
+
+
