@@ -1,6 +1,6 @@
 @font-face {
-	font-family: AlarmClock sans-serif;
-	src: url(/font/alarm\ clock.ttf);
+	font-family: AlarmClock;
+	src: url(./font/alarm\ clock.ttf);
 }
 
 * {
@@ -64,7 +64,7 @@ h1 {
 	text-shadow: 0 2px 1px var(--shadow1), -1px 3px 1px var(--shadow2),
 		-2px 5px 1px var(--shadow3); /*shadows*/
 	color: var(--mainText); /*main text*/
-	font-family: AlarmClock sans-serif;
+	font-family: AlarmClock, sans-serif;
 	margin: 20px 0;
 	font-size: 4rem;
 	display: inline-block;
