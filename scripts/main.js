@@ -71,17 +71,20 @@ function showTime() {
 	displayedGreeting.innerHTML = `${greeting}`;
 }
 
-//A function that writes the day fo the month in full e,g 1st, 2nd, 3rd and so on
+//A function that writes the day of the month in full e,g 1st, 2nd, 3rd and so on
 function day() {
+        // Current Date
 	var date = new Date();
+        // Current day: 31, 1, 14 etc
 	var dayOfMonth = date.getDate();
+        // Converys the current day into a string e.g "31", now it is indexed
 	var str = dayOfMonth.toString();
 
-	if (dayOfMonth === 1 || str[1] === "1") {
+	if (dayOfMonth === 1 || (str[0] !== "1" && str[1] === "1")) {
 		return dayOfMonth + "st";
-	} else if (dayOfMonth === 2 || str[1] === "2") {
+	} else if (dayOfMonth === 2 || (str[0] !== "1" && str[1] === "2")) {
 		return dayOfMonth + "nd";
-	} else if (dayOfMonth === 3 || str[1] === "3") {
+	} else if (dayOfMonth === 3 || (str[0] !== "1" && str[1] === "3")) {
 		return dayOfMonth + "rd";
 	} else {
 		return dayOfMonth + "th";
